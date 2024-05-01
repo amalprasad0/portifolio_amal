@@ -3,7 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@font-face {
+  font-family: 'IstokWeb-Bold';
+  src: url('./../assets/fonts/IstokWeb-Bold.ttf');
+}
+@font-face {
+  font-family: 'IstokWeb-Regular';
+  src: url('./../assets/fonts/IstokWeb-Regular.ttf');
+}
+@font-face {
+  font-family: 'IstokWeb-Italic';
+  src: url('./../assets/fonts/IstokWeb-Italic.ttf');
+}
 
 .carousel-card {
     width: 120px;
@@ -19,4 +30,93 @@
     height: 100%;
     object-fit: cover;
   }
+  .Banner {
+    justify-content: center;
+    /* max-width: 50%; */
+    align-items: center;
+    top: 60%;
+    transform: translateY(-60%);
+    padding: 1rem;
+    position: absolute;
+
+  }
+  
+  .banner-text {
+    font-size: 46px;
+    /* justify-content: center; */
+    font-weight: bold;
+    font-family: IstokWeb-Bold;
+    text-shadow: 2px 2px 10px rgba(31, 38, 135, 0.37); /* Add text shadow */
+  }
+  
+  .banner-buttons {
+    display: flex;
+    /* justify-content: space-evenly; */
+  }
+  
+  .banner-paragraph {
+    font-size: 12px;
+    font-family: IstokWeb-Regular;
+  }
+  
+  .glassmorphic-button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+  }
+  
+  .glassmorphic-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+  .BannerContainer {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+  }
+  
+  .carousel-container {
+    float: left;
+    margin-right: 20px; 
+    position: relative;
+    /* Adjust as needed */
+  }
+  
+  
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 auto;
+    width: 100%; /* Ensure each slide takes up full width */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  /* For horizontal movement */
+  .carousel-wrapper {
+    transition: transform 0.5s ease;
+  }
+  
+  /* For vertical movement */
+  .carousel-wrapper {
+    flex-direction: column;
+    transition: transform 0.5s ease;
+  }
+  
   
